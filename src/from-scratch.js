@@ -1,4 +1,4 @@
-const measureRain = () => {
+const measureRain = (inches) => {
   if (inches <= 0) {
     return "drought";
   } else if (inches < 2) {
@@ -12,7 +12,7 @@ const measureRain = () => {
   }
 };
 
-const happyBirthdayPet = () => {
+const happyBirthdayPet = (breed, age) => {
   if (breed === 'snake') {
     return "Hiss hiss!";
   } else if (breed === "cat" && age < 5) {
@@ -30,7 +30,7 @@ const happyBirthdayPet = () => {
   }
 };
 
-const funTypes = () => {
+const funTypes = (jsType) => {
   if (typeof jsType === "string") {
     return "That's just some text.";
   } else if (Number.isNaN(jsType)) {
@@ -52,7 +52,7 @@ const funTypes = () => {
   }
 };
 
-const rounder = () => {
+const rounder = (float, roundingSetting) => {
   if (roundingSetting === "up") {
     return Math.ceil(float);
   } else if (roundingSetting === "down") {
@@ -62,17 +62,17 @@ const rounder = () => {
   };
 };
 
-const formatName = () => {
+const formatName = (first, last) => {
   let formattedFirst = first.charAt(0).toUpperCase() + first.slice(1).toLowerCase();
   let formattedLast = last.charAt(0).toUpperCase() + last.slice(1).toLowerCase();
   return `${formattedFirst} ${formattedLast}`;
 };
 
-const extractDomain = () => {
+const extractDomain = (email) => {
   return email.split("@").pop();
 };
 
-const startsWithVowel = () => {
+const startsWithVowel = (str) => {
   let vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"]
   if (vowels.includes(str[0])) {
     return true;
@@ -81,7 +81,7 @@ const startsWithVowel = () => {
   }
 };
 
-const rotate = () => {
+const rotate = (str, num) => {
   for (let i = 0; i < num; i++) {
     str = str[str.length - 1] + str.slice(0, str.length - 1)
   }
