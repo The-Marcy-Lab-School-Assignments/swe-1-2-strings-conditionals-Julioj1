@@ -9,15 +9,22 @@ const wildlyBiasedReview = (location) => {
 }
 
 const getWeatherReport = (temperature) => {
+  let weatherReport = "";
+
   if (temperature > 90) {
-    console.log("It's hot and gross out.");
+    weatherReport = "It's hot and gross out.";
   } else if (temperature > 70) {
-    console.log("It's really nice!");
+    weatherReport = "It's really nice!";
   } else if (temperature < 32) {
-    console.log("Wow, it's cold out.");
+    weatherReport = "Wow, it's cold out.";
+  } else {
+    weatherReport = "It's an average day.";
   }
-  return "And that's your report!";
+
+  console.log(weatherReport);
+  console.log("And that's your report!");
 };
+
 
 module.exports = {
   wildlyBiasedReview,
